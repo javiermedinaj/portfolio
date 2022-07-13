@@ -29,19 +29,19 @@ export const skills = [
 export const projects = [
     {
         name: "React",
-        description: "lorem impsum sit amet ......",
+        description: "Proyecto en React",
         image: "reactproyecto.jpeg",
         link: "https://github.com/javiermedinaj/rickandmortyapi"
     },
     {
         name: "Crud",
-        description: "lorem impsum sit amet ......",
+        description: "Crud con NextJS",
         image: "nodeproyecto.png",
         link: "https://github.com/javiermedinaj/crud"
     },
     {
         name: "NextJs",
-        description: "lorem impsum sit amet ......",
+        description: "NextJS, tailwind",
         image: "nextproyecto.jpeg",
         link: "https://github.com/javiermedinaj/testing"
     }

@@ -1,26 +1,56 @@
-import Layout from "../components/Layout"
-import Link from 'next/link'
-const github = () =>
-    <Layout>
-        <div>
+import Layout from "../components/Layout";
 
 
-            <div className="container py-3">
-                <h2 className="text-center">Working...</h2>
-                <div className="card py-5">
-                    <img src="/trabajo.jpg" className="card-img-fluid" alt="..." />
-                    <div className="card-body text-center">
-                        <h5 className="card-title">Estamos trabando en esto</h5>
-                        <p className="card-text">Pensando ideas</p>
-                        <Link href="/">
-                            <a className="btn btn-primary">Volver a la pagina principal</a>
-                        </Link>
+const Github = ({ user, statusCode }) => {
+    if (statusCode) {
+        return <Error statusCode={statusCode} />;
+    }
+
+    return (
+        <Layout title="My Github" footer={false} dark>
+            <div className="container">
+                <div className="col-md-4 offset-md-4">
+                    <div className="card card-body text-center">
+                        <h1>{user.name}</h1>
+                        <img src={user.avatar_url} alt="" style={{ width: "100%" }} />
+                        <p className="mt-2" >{user.bio}</p>
+                        <a
+                            href={user.blog}
+                            target="_blank"
+                            className="btn btn-outline-secondary my-2"
+                        >
+                            My Blog
+                        </a>
+                        <a
+                            href={user.html_url}
+                            target="_blank"
+                            className="btn btn-outline-secondary"
+                        >
+                            Go to Github
+                        </a>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </Layout>
+        </Layout>
+    );
+};
 
+Github.proptypes = {};
 
-export default github
+export async function getServerSideProps() {
+    const res = await fetch(
+        "https://api.github.com/users/javiermedinaj"
+    );
+    const data = await res.json();
+
+    const statusCode = res.status > 200 ? res.status : false;
+
+    return {
+        props: {
+            user: data,
+            statusCode,
+        },
+    };
+}
+
+export default Github;

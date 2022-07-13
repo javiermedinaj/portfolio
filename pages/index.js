@@ -15,10 +15,7 @@ const Index = () => (
                             <h2 className="py-2">Javier Medina</h2>
                             <h3>FrontEnd Developer</h3>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Molestiae atque ullam perferendis harum, nisi porro voluptate,
-                                iste consequuntur enim reprehenderit architecto consectetur cum?
-                                Totam ad molestias natus illum illo officia.
+                                FrontEnd Developer Freelace
                             </p>
                             <Link href="/hireme">
                                 <a className="btn btn-outline-light">Hire Me</a>
@@ -78,7 +75,7 @@ const Index = () => (
                                         <div className="card-body">
                                             <h3 className="text-center">{name}</h3>
                                             <p className="text-center">{description}</p>
-                                            <p className="text-center"><a href={link} target="_blank" className="btn btn-dark">Know More </a></p>
+                                            <p className="text-center"><a href={link} target="_blank" className="btn btn-dark">Ver mas </a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -86,8 +83,8 @@ const Index = () => (
 
                             <div className="col-md-12 mt-4">
                                 <div className="text-center">
-                                    <Link href="/portfolio">
-                                        <a className="btn btn-outline-light">More Projects</a>
+                                    <Link href="/github">
+                                        <a className="btn btn-outline-light">Mas proyectos</a>
                                     </Link>
                                 </div>
                             </div>
