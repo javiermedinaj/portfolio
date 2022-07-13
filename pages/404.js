@@ -11,7 +11,7 @@ const custom404 = () => (
                 <img src="/travolta.gif" width="500em" height="500em" className="card-img" alt="..." />
                 <div className="card-body text-center">
                     <h5 className="card-title">Error 404</h5>
-                    <p className="card-text">Esta pagina esta en trabajo.</p>
+                    <p className="card-text">Esta seccion aun no esta disponible</p>
                     <Link href="/">
                         <a className="btn btn-primary">Volver a la pagina principal</a>
                     </Link>

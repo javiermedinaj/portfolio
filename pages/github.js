@@ -1,8 +1,25 @@
 import Layout from "../components/Layout"
-
+import Link from 'next/link'
 const github = () =>
     <Layout>
-        <h2>my project</h2>
+        <div>
+
+
+            <div className="container py-3">
+                <h2 className="text-center">Working...</h2>
+                <div className="card py-5">
+                    <img src="/trabajo.jpg" className="card-img-fluid" alt="..." />
+                    <div className="card-body text-center">
+                        <h5 className="card-title">Estamos trabando en esto</h5>
+                        <p className="card-text">Pensando ideas</p>
+                        <Link href="/">
+                            <a className="btn btn-primary">Volver a la pagina principal</a>
+                        </Link>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </Layout>
 
 

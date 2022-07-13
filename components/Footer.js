@@ -29,7 +29,7 @@ const Footer = () => {
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
                             <h6 className="text-uppercase fw-bold mb-4">
-                                Proyects
+                                More  Proyects
                             </h6>
                             <p>
                                 <a href="https://github.com/javiermedinaj/cripto-react" target="_blank" className="text-reset">Price of cripto</a>
@@ -50,9 +50,9 @@ const Footer = () => {
                                 Contact
                             </h6>
                             <p><i className="fas fa-home me-3" />Buenos Aires</p>
-
-                            <i className="fas fa-home me-3" /><a href="https://www.linkedin.com/in/javier-medina-783b721a9/" target="_blank"> Linkedin
-                            </a>                          </div>
+                            <p> <i className="fas fa-home me-3" /><a href="https://www.linkedin.com/in/javier-medina-783b721a9/" target="_blank"> Linkedin
+                            </a> </p>
+                        </div>
                     </div>
                 </div>
             </section>
