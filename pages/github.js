@@ -1,10 +1,8 @@
 import Layout from "../components/Layout";
 
 
-const Github = ({ user, statusCode }) => {
-    if (statusCode) {
-        return <Error statusCode={statusCode} />;
-    }
+const Github = ({ user }) => {
+
 
     return (
         <Layout title="My Github" footer={false} dark>
@@ -42,13 +40,9 @@ export async function getServerSideProps() {
         "https://api.github.com/users/javiermedinaj"
     );
     const data = await res.json();
-
-    const statusCode = res.status > 200 ? res.status : false;
-
     return {
         props: {
             user: data,
-            statusCode,
         },
     };
 }
